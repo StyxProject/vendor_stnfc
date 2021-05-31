@@ -1,6 +1,6 @@
 # Device configuration file to be included from device.mk file, e.g.
 #
-#   -include vendor/st/nfc/st21nfc/NfcDeviceConfig.mk
+#   -include vendor/stnfc/NfcDeviceConfig.mk
 
 ######################################################################
 ##########################  SYSTEM image  ############################
@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.nxp.mifare.xml:st \
 
 # To keep P2P support :
-# PRODUCT_COPY_FILES += vendor/st/nfc/st21nfc/conf/android.sofware.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.sofware.nfc.beam.xml:st
+# PRODUCT_COPY_FILES += vendor/stnfc/conf/android.sofware.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.sofware.nfc.beam.xml:st
 
 # To support APDU Gate:
 PRODUCT_PACKAGES += \
@@ -35,11 +35,11 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras.xml
 
 PRODUCT_COPY_FILES += \
-   vendor/st/nfc/st21nfc/conf/nfcee_access.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/nfcee_access.xml:st
+   vendor/stnfc/conf/nfcee_access.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/nfcee_access.xml:st
 
 # Init.rc files
 PRODUCT_COPY_FILES += \
-   vendor/st/nfc/st21nfc/conf/init.system.st21nfc.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/hw/init.stnfc.rc:st
+   vendor/stnfc/conf/init.system.st21nfc.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/hw/init.stnfc.rc:st
 
 ################################################
 ## NFC Forum Digital support
